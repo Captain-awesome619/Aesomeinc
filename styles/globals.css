@@ -623,7 +623,6 @@ margin-top: 160px;
 
   .btn-container{
     width: 250px;
-   
     overflow-y: hidden;
   }
 
@@ -691,14 +690,12 @@ margin-top: 160px;
     height: 350px;
   }
   .cart-container{
-    position: fixed;
     display: inline-block;
-    width: 700px;
-    height: 120vh;
+    width: 425px;
   padding: 5px;
   z-index: 10;
   overflow-y: hidden;
-  overflow-x: hidden;
+  position: relative;
   }
   .cart-heading{
     margin-top: 35px;
