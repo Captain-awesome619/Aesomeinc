@@ -684,9 +684,12 @@ margin-top: 160px;
     height: 350px;
   }
   .cart-container{
-    width: 400px;
+    position: fixed;
+    display: inline-block;
+    width: 500px;
+    height: 120vh;
   padding: 5px;
-  z-index: 5;
+  z-index: 10;
   overflow-y: hidden;
   }
   .cart-heading{
