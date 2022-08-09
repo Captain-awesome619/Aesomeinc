@@ -686,11 +686,10 @@ margin-top: 160px;
   .cart-container{
     position: fixed;
     display: inline-block;
-    width: 500px;
+    width: 700px;
     height: 120vh;
   padding: 5px;
   z-index: 10;
-  overflow-y: hidden;
   }
   .cart-heading{
     margin-top: 35px;
