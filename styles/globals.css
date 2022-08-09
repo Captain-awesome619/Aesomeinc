@@ -777,7 +777,10 @@ margin-top: 160px;
 .btn:hover{
   transform: scale(1);
 }
-
+.hero-banner-container button{
+  margin-top: 25px;
+  margin-right: 1rem;
+}
 .cart-bottom{
   position: relative;
 }
