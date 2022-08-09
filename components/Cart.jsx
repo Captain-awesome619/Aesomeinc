@@ -79,15 +79,14 @@ const Cart = () => {
               <h3>${totalPrice.toFixed(2)}</h3>
             </div>
 
-
+            <Link href ="/sucess">
             <div className="btn-container">
-              <Link href="/sucess">
+
               <button type="button" className="btn" onClick={() => setShowCart(false) }>
                 Checkout
               </button>
-              </Link>
             </div>
-
+            </Link>
 
 </div>
 )}
