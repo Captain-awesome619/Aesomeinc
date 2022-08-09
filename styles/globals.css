@@ -393,9 +393,8 @@ padding: 30px 65px;
 }
 
 .btn-container{
-  width: 300px;
-  margin: 1;
-display: inline;
+  width: 250px;
+  margin: auto;
 }
 .btn{
   width: 100%;
@@ -414,7 +413,7 @@ display: inline;
   transition: transform 0.5s ease;
 }
 .btn:hover{
-  transform: scale(1.1,1.1);
+  transform: scale(1.0,1.0);
 }
 .product-detail-container{
   display: flex;
@@ -685,9 +684,9 @@ margin-top: 160px;
     height: 350px;
   }
   .cart-container{
-    width: 415px;
-  padding: 4px;
-  z-index: 2;
+    width: 400px;
+  padding: 5px;
+  z-index: 5;
   overflow-y: hidden;
   }
   .cart-heading{
@@ -735,7 +734,7 @@ margin-top: 160px;
    color: black;
 }
 .cart-bottom{
-  padding: 30px;
+  padding: 40px;
 }
 
 .total h3{
@@ -764,4 +763,5 @@ margin-top: 160px;
   width: 300px;
   margin: auto;
 }
+
 }
