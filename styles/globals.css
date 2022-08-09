@@ -620,6 +620,13 @@ margin-top: 160px;
 }
 
 @media screen and (max-width:800px) {
+
+  .btn-container{
+    width: 250px;
+   
+    overflow-y: hidden;
+  }
+
   .hero-banner-container{
     height: 560px;
   }
@@ -690,6 +697,8 @@ margin-top: 160px;
     height: 120vh;
   padding: 5px;
   z-index: 10;
+  overflow-y: hidden;
+  overflow-x: hidden;
   }
   .cart-heading{
     margin-top: 35px;
