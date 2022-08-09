@@ -393,7 +393,7 @@ padding: 30px 65px;
 }
 
 .btn-container{
-  width: 400px;
+  width: 300px;
   margin: auto;
 }
 .btn{
@@ -686,6 +686,8 @@ margin-top: 160px;
   .cart-container{
     width: 415px;
   padding: 4px;
+  z-index: 2;
+  overflow-y: hidden;
   }
   .cart-heading{
     margin-top: 35px;
