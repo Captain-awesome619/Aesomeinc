@@ -384,16 +384,16 @@ padding: 20px 10px;
   border: none;
 }
 .cart-bottom{
-  position: absolute;
+  position: relative;
   bottom: 12px;
   right: 5px;
 width: 100%;
 padding: 30px 65px;
-
+display: inline block;
 }
 
 .btn-container{
-  width: 250px;
+  width: 300px;
   margin: auto;
 }
 .btn{
@@ -690,12 +690,10 @@ margin-top: 160px;
     height: 350px;
   }
   .cart-container{
-    display: inline-block;
-    width: 425px;
-  padding: 5px;
-  z-index: 10;
+    width: 415px;
+  padding: 4px;
+  z-index: 5;
   overflow-y: hidden;
-  position: relative;
   }
   .cart-heading{
     margin-top: 35px;
