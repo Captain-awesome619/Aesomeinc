@@ -57,7 +57,7 @@ width: 100%;
 }
 @keyframes marquee {
   from { transform: translateX(0); }
-  to { transform: translateX(-60%); }
+  to { transform: translateX(-50%); }
 }
 
  span.text-red {
@@ -167,9 +167,9 @@ width: 100%;
 .hero-banner-image{
   position: absolute;
   top: 0%;
-  right:30%;
-  width: 400px;
-  height: 400px;
+  right:20%;
+  width: 450px;
+  height: 450px;
 }
 
 
@@ -246,11 +246,10 @@ text-align: end;
 }
 .footer-banner-image{
   position: absolute;
-   top: -25%;
+  /* top: -35%;
+  left: 8%; */
+  top: -25%;
   left: 25%;
-
-  width: 30%;
-
 }
 .banner-desc .right{
   line-height: 1.4;
@@ -384,16 +383,16 @@ padding: 20px 10px;
   border: none;
 }
 .cart-bottom{
-  position: relative;
+  position: absolute;
   bottom: 12px;
   right: 5px;
 width: 100%;
 padding: 30px 65px;
-display: inline block;
+
 }
 
 .btn-container{
-  width: 300px;
+  width: 400px;
   margin: auto;
 }
 .btn{
@@ -413,7 +412,7 @@ display: inline block;
   transition: transform 0.5s ease;
 }
 .btn:hover{
-  transform: scale(1.0,1.0);
+  transform: scale(1.1,1.1);
 }
 .product-detail-container{
   display: flex;
@@ -620,30 +619,24 @@ margin-top: 160px;
 }
 
 @media screen and (max-width:800px) {
-
-  .btn-container{
-    width: 250px;
-    overflow-y: hidden;
-  }
-
   .hero-banner-container{
     height: 560px;
   }
   .hero-banner-image{
-    width: 50%;
-    height: 35%;
-    top: 35%;
+    width: 77%;
+    height: 62%;
+    top: -2%;
     right: -6%;
   }
   .footer-banner-container{
-    height: 600px;
-    margin-top: 70px;
+    height: 560px;
+    margin-top: 80px;
   }
   .footer-banner-image{
-    width: 50%;
-    left: 50%;
+    width: 77%;
+    left: 30%;
     top: 6%;
-    height: 36%
+    height: 56%
   }
   .banner-desc .left h3{
     font-weight: 900;
@@ -676,7 +669,7 @@ margin-top: 160px;
     font-size: 40px;
   }
   .hero-banner-container button{
-    margin-top: 20px;
+    margin-top: 90px;
     z-index: 10000;
   }
   .desc{
@@ -692,8 +685,6 @@ margin-top: 160px;
   .cart-container{
     width: 415px;
   padding: 4px;
-  z-index: 5;
-  overflow-y: hidden;
   }
   .cart-heading{
     margin-top: 35px;
@@ -740,7 +731,7 @@ margin-top: 160px;
    color: black;
 }
 .cart-bottom{
-  padding: 40px;
+  padding: 30px;
 }
 
 .total h3{
@@ -769,5 +760,5 @@ margin-top: 160px;
   width: 300px;
   margin: auto;
 }
-
 }
+

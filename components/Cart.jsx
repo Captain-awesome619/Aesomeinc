@@ -81,7 +81,7 @@ const Cart = () => {
 
 
             <div className="btn-container">
-              <Link href={"sucess"}>
+              <Link href={"/sucess"}>
               <button type="button" className="btn" onClick={() => setShowCart(false) }>
                 Checkout
               </button>
