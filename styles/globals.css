@@ -402,13 +402,12 @@ padding: 30px 65px;
   border-radius: 15px;
   border: none;
   font-size: 20px;
-  margin-top: 10px;
-  margin-top: 40px;
+ margin-top: 1rem;
   text-transform: uppercase;
   background-color: #f02d34;
   color: #fff;
   cursor: pointer;
-    transform: scale(1, 1);
+    transform: scale(1);
   transition: transform 0.5s ease;
 }
 .btn:hover{
@@ -760,5 +759,29 @@ margin-top: 160px;
   width: 300px;
   margin: auto;
 }
+.btn{
+  width: 60%;
+  max-width: 400px;
+  padding: 5px 6px;
+  border-radius: 15px;
+  border: none;
+  font-size: 20px;
+ margin-top: 1rem;
+  text-transform: uppercase;
+  background-color: #f02d34;
+  color: #fff;
+  cursor: pointer;
+    transform: scale(1);
+  transition: transform 0.5s ease;
+}
+.btn:hover{
+  transform: scale(1);
+}
+
+.cart-bottom{
+  position: relative;
+}
+
+
 }
 
