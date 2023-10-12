@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }) {
 <AuthProvider>
     <StateContext>
 <Layout>
+  
   <Toaster/>
   <Component {...pageProps} />
   </Layout>

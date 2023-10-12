@@ -2,7 +2,7 @@ import { useRef, useState, useEffect, useContext } from 'react';
 import AuthContext from './context/AuthProvider';
 import axios from './api/axios';
 import Home from './landing';
-
+import {useRouter} from "next/router"
 const LOGIN_URL = '/user/login';
 
 const Login = () => {
@@ -22,7 +22,7 @@ const Login = () => {
     useEffect(() => {
         setErrMsg('');
     }, [user, pwd])
-
+    const route = useRouter()
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -42,6 +42,8 @@ const Login = () => {
             setUser('');
             setPwd('');
             setSuccess(true);
+            route.push("/landing")
+            console.log(success)
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
@@ -55,12 +57,8 @@ const Login = () => {
             errRef.current.focus();
         }
     }
-
     return (
         <>
-            {success ? (
-                <Home/>
-            ) : (
                 <section>
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
                     <h1>Sign In</h1>
@@ -94,7 +92,7 @@ const Login = () => {
                         </span>
                     </p>
                 </section>
-            )}
+
         </>
     )
 }
