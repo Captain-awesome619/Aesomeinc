@@ -3,7 +3,7 @@ import axios from './api/axios';
 
 
 const FORGOT_URL = "/user/forgot-password"
-const forgotpassword = () => {
+const Forgotpassword = () => {
 
     const userRef = useRef();
     const errRef = useRef();
@@ -66,4 +66,4 @@ required
   )
 }
 
-export default forgotpassword
+export default Forgotpassword
