@@ -8,14 +8,16 @@ import { AuthProvider } from './context/AuthProvider'
 
 function MyApp({ Component, pageProps }) {
   return(
-<AuthProvider>
+
     <StateContext>
+      <AuthProvider>
 <Layout>
   <Toaster/>
   <Component {...pageProps} />
   </Layout>
-  </StateContext>
   </AuthProvider>
+  </StateContext>
+
   )
 }
 
