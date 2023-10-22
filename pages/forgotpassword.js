@@ -42,10 +42,13 @@ if (!err?.response) {
     }
   return (
     <>
-    <p  ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+
         {
              view == false ?
-    <form className="forgotpage" onSubmit= {handleSubmit2}>
+    <form className="forgotpage1" onSubmit= {handleSubmit2}>
+
+        <p  ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+        <div className="forgotpage">
         <input
         className ="inputtt"
         ref={userRef}
@@ -58,6 +61,7 @@ value={user}
 required
        />
         <button className="button1">submit</button>
+        </div>
 </form>
 :
 <h1>Check Your Mail</h1>

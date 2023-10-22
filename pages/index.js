@@ -200,8 +200,9 @@ return;
                     <FontAwesomeIcon icon={faInfoCircle} />
                     Must match the first password input field.
                 </p>
-
-                <button disabled={!validMail || !validPwd || !validMatch ? true : false}>Sign Up</button>
+<div className="signupp">
+                <button disabled={!validMail || !validPwd || !validMatch ? true : false} className="button1">Sign Up</button>
+                </div>
             </form>
             <p>
                 Already registered?<br />
