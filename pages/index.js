@@ -119,6 +119,7 @@ return;
                     onChange={(e) => setUser2(e.target.value)}
                     value={user2}
                     required
+                    className="inputtt"
                     aria-invalid={validName ? "false" : "true"}
                     aria-describedby="uidnote"
                     onFocus={() => setUserFocus2(true)}
@@ -143,6 +144,7 @@ return;
                     onChange={(e) => setUser(e.target.value)}
                     value={user}
                     required
+                    className="inputtt"
                     aria-invalid={validMail ? "false" : "true"}
                     aria-describedby="uidnote"
                     onFocus={() => setUserFocus(true)}
@@ -163,6 +165,7 @@ return;
                     onChange={(e) => setPwd(e.target.value)}
                     value={pwd}
                     required
+                    className="inputtt"
                     aria-invalid={validPwd ? "false" : "true"}
                     aria-describedby="pwdnote"
                     onFocus={() => setPwdFocus(true)}
@@ -187,6 +190,7 @@ return;
                     onChange={(e) => setMatchPwd(e.target.value)}
                     value={matchPwd}
                     required
+                    className="inputtt"
                     aria-invalid={validMatch ? "false" : "true"}
                     aria-describedby="confirmnote"
                     onFocus={() => setMatchFocus(true)}

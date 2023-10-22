@@ -2,5 +2,5 @@ import axios from 'axios'
 
 
 export default axios.create({
-    baseURL: 'https://backend-ph5v.vercel.app/'
+    baseURL: 'https://backend-three-neon.vercel.app/'
 });
