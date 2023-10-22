@@ -4,7 +4,7 @@ import { Layout } from '../components'
 import { StateContext } from '../context/StateContext'
 import { Toaster } from 'react-hot-toast'
 import Home from '.'
-import { AuthProvider } from './context/AuthProvider'
+import { AuthProvider } from '../context/AuthProvider'
 
 function MyApp({ Component, pageProps }) {
   return(

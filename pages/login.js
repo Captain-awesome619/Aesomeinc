@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect, useContext } from 'react';
-import AuthContext from './context/AuthProvider';
+import AuthContext from '../context/AuthProvider';
 import axios from './api/axios';
 import Home from './landing';
 import {useRouter} from "next/router"
