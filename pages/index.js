@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from './api/axios';
-
+import Link from 'next/link';
 const USER_NAME_REGEX = /^[A-z][A-z0-9-_]{3,23}$/
 const MAIL_REGEX = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -207,7 +207,7 @@ return;
                 Already registered?<br />
                 <span className="line">
                     {/*put router link here*/}
-                    <a href="/login">Sign In</a>
+                    <Link href="/login">Sign In</Link>
                 </span>
             </p>
         </section>
