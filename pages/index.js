@@ -96,7 +96,7 @@ return;
         <section>
             <h1>Success!</h1>
             <p>
-                <a href="/login">Sign In</a>
+                <Link href="/login">Sign In</Link>
             </p>
         </section>
     ) : (
