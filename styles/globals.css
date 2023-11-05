@@ -141,8 +141,7 @@ width: 100%;
 }
 .buttoncover{
   display: flex;
-  justify-content: center;
-  align-items: center;
+ 
 }
 .button1{
   padding: 0.5rem 2rem;
