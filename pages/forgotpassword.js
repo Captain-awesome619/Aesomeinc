@@ -1,8 +1,8 @@
 import React,{useState,useEffect,useRef} from 'react'
-import axios from './api/axios';
+import axios2 from './api/axios2';
 
 
-const FORGOT_URL = "/user/forgot-password"
+const FORGOT_URL = "https://api-ecommerce-app-a3hc.onrender.com/user/forgot-password"
 const Forgotpassword = () => {
 
     const userRef = useRef();
@@ -17,7 +17,7 @@ const Forgotpassword = () => {
 const handleSubmit2 = async (e) =>{
         e.preventDefault();
         try {
-            const response = await axios.post(FORGOT_URL,
+            const response = await axios2.post(FORGOT_URL,
                 JSON.stringify({ email:user }),
                 {
                     headers: { 'Content-Type': 'application/json' },
@@ -64,7 +64,7 @@ required
         </div>
 </form>
 :
-<h1>Check Your Mail</h1>
+<h1>your password reset link has been sent,please check Your Mail inbox or your Spam folder </h1>
 }
 </>
   )
