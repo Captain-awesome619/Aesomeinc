@@ -64,7 +64,7 @@ required
         </div>
 </form>
 :
-<h1>your password reset link has been sent,please check Your Mail inbox or your Spam folder </h1>
+<h1>your password reset link has been sent,please check Your Mail inbox or your JUNK folder </h1>
 }
 </>
   )
