@@ -208,7 +208,9 @@ return;
                 Already registered?<br />
                 <span className="line">
                     {/*put router link here*/}
+                    <div className="signupp">
                     <Link href="/login"><button className-="button1">Sign In</button></Link>
+</div>
                 </span>
             </p>
         </section>
