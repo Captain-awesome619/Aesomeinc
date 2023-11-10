@@ -3,6 +3,7 @@ import AuthContext from '../context/AuthProvider';
 import axios from './api/axios';
 import Home from './landing';
 import {useRouter} from "next/router"
+import Link from 'next/link';
 const LOGIN_URL = '/user/login';
 
 const Login = () => {
@@ -101,7 +102,7 @@ const Login = () => {
                         Need an Account?<br />
                         <span className="line">
 
-                            <button className="button1" href="/">Sign Up</button>
+                         <Link  href="/"><button className="button1">Sign Up</button></Link>
                         </span>
 </div>
                         <span className="line2">
