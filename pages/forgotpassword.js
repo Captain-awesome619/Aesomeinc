@@ -2,7 +2,7 @@ import React,{useState,useEffect,useRef} from 'react'
 import axios2 from './api/axios2';
 
 
-const FORGOT_URL = "https://api-ecommerce-app-a3hc.onrender.com/user/forgot-password"
+const FORGOT_URL = "/user/forgot-password"
 const Forgotpassword = () => {
 
     const userRef = useRef();
