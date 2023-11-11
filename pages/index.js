@@ -206,7 +206,7 @@ return;
             </form>
             <p>
                 Already registered?<br />
-                <span className="signupp">
+                <span className="line1">
                     {/*put router link here*/}
 
                     <Link href="/login"><button className-="button1">Sign In</button></Link>
