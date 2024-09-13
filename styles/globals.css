@@ -12,7 +12,31 @@ body, * {
 ::-webkit-scrollbar {
   width: 0px;
 }
-
+.headcov1{
+ opacity: 0.5;
+}
+.headcov2{
+  opacity: 1;
+}
+.covload1{
+ position: absolute;
+ display: flex;
+ justify-items: center;
+ align-items: center;
+ justify-content: center;
+ left: 50%;
+ top: 40%;
+}
+.covload2{
+  display: none;
+}
+.clip{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  position: absolute;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -147,6 +171,7 @@ width: 100%;
   padding: 0.5rem 2rem;
   border-radius: 5%;
   cursor: pointer;
+  border-radius: 10%;
 }
 .needact{
   display:  flex;

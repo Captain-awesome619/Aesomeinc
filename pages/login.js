@@ -4,6 +4,7 @@ import axios from './api/axios';
 import Home from './landing';
 import {useRouter} from "next/router"
 import Link from 'next/link';
+import ClipLoader from "react-spinners/ClipLoader"
 const LOGIN_URL = '/user/login';
 
 const Login = () => {
@@ -18,7 +19,7 @@ const Login = () => {
     const [pwd, setPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
-
+    const [load, setload] = useState(false);
 
 
     useEffect(() => {
@@ -31,6 +32,7 @@ const Login = () => {
     const route = useRouter()
 
     const handleSubmit = async (e) => {
+        setload(true)
         e.preventDefault();
 
         try {
@@ -49,6 +51,7 @@ const Login = () => {
             setUser('');
             setPwd('');
             setSuccess(true);
+            setload(false)
             route.push("/landing")
             console.log(success)
         } catch (err) {
@@ -63,10 +66,21 @@ const Login = () => {
             }
             errRef.current.focus();
         }
+        setload(false)
     }
 
     return (
         <>
+         <div  className={load === true ? "headcov1" : "headcov2"}>
+          <div className={load === true ? "covload1" : "covload2"}>
+ <ClipLoader
+        color="blue"
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+        className='clip'
+      />
+      </div>
 <div className="control">
    <section className="sectionnn">
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
@@ -110,6 +124,7 @@ const Login = () => {
                         </span>
                     </p>
                 </section>
+                </div>
                 </div>
         </>
     )

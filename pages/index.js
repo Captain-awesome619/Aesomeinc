@@ -3,6 +3,8 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from './api/axios';
+import ClipLoader from "react-spinners/ClipLoader"
+import PulseLoader from "react-spinners/PulseLoader"
 import Link from 'next/link';
 const USER_NAME_REGEX = /^[A-z][A-z0-9-_]{3,23}$/
 const MAIL_REGEX = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
@@ -30,6 +32,8 @@ const Register = () => {
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
 
+    const [load, setload] = useState(false);
+
     useEffect(() => {
         userRef.current.focus();
     }, [])
@@ -52,6 +56,7 @@ const Register = () => {
     }, [user, pwd, matchPwd,user2])
 
     const handleSubmit = async (e) => {
+        setload(true)
       e.preventDefault();
       const v1 = MAIL_REGEX.test(user);
       const v2 = PWD_REGEX.test(pwd);
@@ -78,6 +83,7 @@ return;
         setPwd('');
         setMatchPwd('');
         setUser2('');
+        setload(false)
     } catch (err) {
         if (!err?.response) {
             setErrMsg('No Server Response');
@@ -88,15 +94,26 @@ return;
         }
         errRef.current.focus();
     }
+    setload(false)
     }
 
   return(
     <>
+    <div className={load === true ? "headcov1" : "headcov2"}>
+     <div className={load === true ? "covload1" : "covload2"}>
+ <ClipLoader
+        color="blue"
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+        className='clip'
+      />
+      </div>
     {success ? (
         <section>
             <h1>Success!</h1>
             <p>
-                <Link href="/login">Sign In</Link>
+                <button className="button1"><Link href="/login">Sign In</Link></button>
             </p>
         </section>
     ) : (
@@ -104,6 +121,7 @@ return;
         <section className="sectionnn">
             <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
             <h1>Register</h1>
+
             <form className="formmm" onSubmit={handleSubmit} >
 
             <label htmlFor="username">
@@ -209,14 +227,16 @@ return;
                 <span className="line1">
                     {/*put router link here*/}
 
-                    <Link href="/login"><button className-="button1">Sign In</button></Link>
+                    <Link href="/login"><button className="button1">Sign In</button></Link>
 
                 </span>
             </p>
         </section>
 </div>
     )}
+    </div>
 </>
+
 )};
 
 
