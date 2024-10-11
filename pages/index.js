@@ -34,6 +34,8 @@ const Register = () => {
 
     const [load, setload] = useState(false);
 
+
+    
     useEffect(() => {
         userRef.current.focus();
     }, [])
