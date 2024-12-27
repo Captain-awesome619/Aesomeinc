@@ -5,12 +5,14 @@ import Home from './landing';
 import {useRouter} from "next/router"
 import Link from 'next/link';
 import ClipLoader from "react-spinners/ClipLoader"
+import { useString } from '../context/namecontext';
+
 const LOGIN_URL = '/user/login';
 
 const Login = () => {
 
     const [forgot, setforgot] = useState(false);
-
+const { updateString} = useString()
     const { setAuth } = useContext(AuthContext);
     const userRef = useRef();
     const errRef = useRef();
@@ -20,6 +22,7 @@ const Login = () => {
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
     const [load, setload] = useState(false);
+    const [username, setusername] = useState('');
 
 
     useEffect(() => {
@@ -30,6 +33,14 @@ const Login = () => {
         setErrMsg('');
     }, [user, pwd])
     const route = useRouter()
+
+
+    useEffect(() => {
+        if (username) {
+          console.log("Updated details", username);
+          updateString(username)
+        }
+      }, [username]);
 
     const handleSubmit = async (e) => {
         setload(true)
@@ -43,7 +54,13 @@ const Login = () => {
 
                 }
             );
-            console.log(JSON.stringify(response?.data));
+            console.log(response?.data);
+            console.log(response.data.username)
+            const name = response.data.username
+            console.log(name)
+            setusername(name)
+            console.log(username)
+           
             //console.log(JSON.stringify(response));
             const accessToken = response?.data?.accessToken;
             console.log(accessToken)
@@ -52,8 +69,10 @@ const Login = () => {
             setPwd('');
             setSuccess(true);
             setload(false)
+           
             route.push("/landing")
             console.log(success)
+            
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
@@ -69,17 +88,19 @@ const Login = () => {
         setload(false)
     }
 
+   
+
     return (
         <>
          <div  className={load === true ? "headcov1" : "headcov2"}>
           <div className={load === true ? "covload1" : "covload2"}>
- <ClipLoader
+ `<ClipLoader
         color="blue"
         size={150}
         aria-label="Loading Spinner"
         data-testid="loader"
         className='clip'
-      />
+      />`
       </div>
 <div className="control">
    <section className="sectionnn">

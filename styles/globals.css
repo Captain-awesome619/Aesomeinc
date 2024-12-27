@@ -12,6 +12,13 @@ body, * {
 ::-webkit-scrollbar {
   width: 0px;
 }
+.usernametop{
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.usernametop2{
+  font-size: 25px;
+}
 .headcov1{
  opacity: 0.5;
 }
@@ -207,6 +214,9 @@ width: 100%;
 .inputtt{
   padding: 0.5rem 0rem;
 }
+.footer-banner-container{
+  margin-bottom: 5rem;
+}
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -217,12 +227,15 @@ width: 100%;
     margin-left: 6px;
 }
 .logo{
-  color: gray;
-  font-size: 18px;
-
+  font-size: 30px; /* Adjust size as needed */
+    font-weight: bold; /* Make the text bold */
+    background: linear-gradient(90deg, red, orange, yellow, green, orange, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
 }
 .cart-icon{
-  font-size: 25px;
+  font-size: 35px;
   color: gray;
   cursor: pointer;
   position: relative;

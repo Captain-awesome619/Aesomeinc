@@ -1,10 +1,16 @@
 import React from 'react'
 import { Product,FooterBanner,Herobanner } from '../components';
 import { client } from '../lib/client';
+import { useString } from '../context/namecontext';
 
 
-const Home = ({ products, bannerData }) => (
-  <div>
+const Home = ({ products, bannerData }) => {
+
+  const { sharedString } = useString();
+
+  
+  return(<div>
+    <h3 className='usernametop'>Hello <span className='usernametop2'> {sharedString}</span></h3>
     <Herobanner heroBanner= {bannerData.length && bannerData[0]}   />
 {console.log(bannerData)}
     <div className="products-heading">
@@ -18,7 +24,7 @@ const Home = ({ products, bannerData }) => (
 
     <FooterBanner footerBanner={bannerData && bannerData[0]} />
   </div>
-);
+)};
 
 export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';
